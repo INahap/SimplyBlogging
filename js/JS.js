@@ -32,7 +32,7 @@ function loginvalidate() {
         document.getElementById("errUsername").style.display = "none";
     }
 
-    if (password != "1221" && password != null) {
+    if (password != "admin" && password != null) {
         vaild = false;
         document.getElementById("errPassword").innerHTML = "Your password is wrong please try again";
         document.getElementById("errPassword").style.display = "inline";
@@ -68,7 +68,7 @@ var desc  = ["Learn Everything you need about Javascript through our website for
  document.getElementById("desc-post2").innerHTML = desc[1];
  document.getElementById("desc-post3").innerHTML = desc[2];
 
- 
+ //not working/bad code... was trying some things
 function adminpost() {
 
 x = document.getElementById("title-id").value ;
