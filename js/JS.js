@@ -25,7 +25,7 @@ function loginvalidate() {
 
     if (username != "admin" && username != null) {
         vaild = false;
-        document.getElementById("errUsername").innerHTML = "Your username is wronge please try agen";
+        document.getElementById("errUsername").innerHTML = "Your username is wrong please try again";
         document.getElementById("errUsername").style.display = "inline";
     } else {
         document.getElementById("errUsername").innerHTML = "";
@@ -34,7 +34,7 @@ function loginvalidate() {
 
     if (password != "1221" && password != null) {
         vaild = false;
-        document.getElementById("errPassword").innerHTML = "Your password is wronge please try agen";
+        document.getElementById("errPassword").innerHTML = "Your password is wrong please try again";
         document.getElementById("errPassword").style.display = "inline";
         return false;
     } else {
@@ -47,9 +47,39 @@ function loginvalidate() {
     if (vaild == false) {
         return false;
     }
-    else if (username == "admin" && password == "1221") {
-        window.location.href = "admin.html";
+    else if (username == "admin" && password == "admin") {
+        window.location.href = "addinfo.html";
         return true;
 
     }
+
 }
+
+var title = ["JavaScript", "React", "Node.js"];
+var desc  = ["Learn Everything you need about Javascript through our website for free! join us and don't the oppurinunity to learn!",
+ "React is one of the most important Framework that is needed for your carrier as MERN developer! it's free and simple to learn!",
+ "Node.js is an open source server environment and  it's free and simple to learn!"];
+
+ document.getElementById("TitlePost").innerHTML = title[0];
+ document.getElementById("title-post2").innerHTML = title[1];
+ document.getElementById("title-post3").innerHTML = title[2];
+
+ document.getElementById("desc-post").innerHTML = desc[0];
+ document.getElementById("desc-post2").innerHTML = desc[1];
+ document.getElementById("desc-post3").innerHTML = desc[2];
+
+ 
+function adminpost() {
+
+x = document.getElementById("title-id").value ;
+title.unshift(x);
+console.log(title);
+y = document.getElementById("desc-id").value ;
+desc.unshift(y);
+console.log(desc);
+
+}
+
+document.getElementById("TitlePost").innerHTML = title[0];
+document.getElementById("title-post2").innerHTML = title[1];
+document.getElementById("title-post3").innerHTML = title[2];
